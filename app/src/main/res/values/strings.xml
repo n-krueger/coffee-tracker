@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Coffee Tracker</string>
+    <string name="coffe_count_label">Number of coffees:</string>
+    <string name="add_coffee_button">Coffee</string>
+</resources>

@@ -1,0 +1,2 @@
+rootProject.name='Coffee Tracker'
+include ':app'
