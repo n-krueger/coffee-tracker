@@ -9,8 +9,8 @@ import java.io.File
 import java.io.FileNotFoundException
 
 class MainActivity : AppCompatActivity() {
-    val persistentFileName = "coffeCount.json"
-    val jsonCoffeeCountKey = "coffeCount"
+    val persistentFileName = "coffeeCount.json"
+    val jsonCoffeeCountKey = "coffeeCount"
     var coffeeCount = 0
 
     fun readCoffeeCount(): Int {
