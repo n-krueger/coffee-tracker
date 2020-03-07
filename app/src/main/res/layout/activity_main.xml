@@ -41,4 +41,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/coffeCountField" />
+
+    <Button
+        android:id="@+id/resetCoffeeCountButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:onClick="resetCoffeeCount"
+        android:text="@string/reset_coffee_count_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addCoffeeButton" />
 </androidx.constraintlayout.widget.ConstraintLayout>

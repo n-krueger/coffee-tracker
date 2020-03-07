@@ -2,4 +2,5 @@
     <string name="app_name">Coffee Tracker</string>
     <string name="coffe_count_label">Number of coffees:</string>
     <string name="add_coffee_button">Coffee</string>
+    <string name="reset_coffee_count_button">Reset</string>
 </resources>
