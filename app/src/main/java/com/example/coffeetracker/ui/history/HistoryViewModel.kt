@@ -1,12 +1,13 @@
-package com.example.coffeetracker
+package com.example.coffeetracker.ui.history
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.viewModelScope
-import kotlinx.coroutines.launch
+import com.example.coffeetracker.AppDatabase
+import com.example.coffeetracker.CoffeeEvent
+import com.example.coffeetracker.CoffeeEventRepository
 
-class CoffeeViewModel(application: Application) : AndroidViewModel(application) {
+class HistoryViewModel(application: Application) : AndroidViewModel(application) {
     private val repository: CoffeeEventRepository
     val allCoffeeEvents: LiveData<List<CoffeeEvent>>
 
@@ -14,9 +15,5 @@ class CoffeeViewModel(application: Application) : AndroidViewModel(application) 
         val coffeeEventDao = AppDatabase.getDatabase(application).coffeeEventDao()
         repository = CoffeeEventRepository(coffeeEventDao)
         allCoffeeEvents = repository.allCoffeeEvents
-    }
-
-    fun insert(vararg coffeeEvents: CoffeeEvent) = viewModelScope.launch {
-        repository.insertAll(*coffeeEvents)
     }
 }

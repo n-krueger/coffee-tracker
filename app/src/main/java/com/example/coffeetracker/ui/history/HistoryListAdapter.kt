@@ -1,4 +1,4 @@
-package com.example.coffeetracker
+package com.example.coffeetracker.ui.history
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -6,10 +6,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.coffeetracker.CoffeeEvent
+import com.example.coffeetracker.R
 
-class CoffeeListAdapter internal constructor(
+class HistoryListAdapter internal constructor(
     context: Context
-) : RecyclerView.Adapter<CoffeeListAdapter.CoffeeViewHolder>() {
+) : RecyclerView.Adapter<HistoryListAdapter.CoffeeViewHolder>() {
     private val inflater: LayoutInflater = LayoutInflater.from(context)
     private var coffeeEvents = emptyList<CoffeeEvent>()
 
