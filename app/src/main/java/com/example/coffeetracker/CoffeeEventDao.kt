@@ -18,6 +18,11 @@ interface CoffeeEventDao {
     )
     fun loadAllByTimestamp(start: OffsetDateTime, end: OffsetDateTime): LiveData<List<CoffeeEvent>>
 
+    @Query("SELECT count(*) FROM coffeeevent " +
+        "WHERE datetime(timestamp) >= datetime(:start) AND datetime(timestamp) < datetime(:end)"
+    )
+    fun countByTimestamp(start: OffsetDateTime, end: OffsetDateTime): LiveData<Int>
+
     @Insert
     suspend fun insertAll(vararg coffeeEvents: CoffeeEvent)
 

@@ -1,10 +1,8 @@
 <resources>
     <string name="app_name">Coffee Tracker</string>
-    <string name="coffe_count_label">Number of coffees:</string>
-    <string name="add_coffee_button">Coffee</string>
-    <string name="reset_coffee_count_button">Reset</string>
-    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_main">Coffee Tracker</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_history">History</string>
+    <string name="text_coffee_count_label">Your coffee count for today:</string>
 </resources>
