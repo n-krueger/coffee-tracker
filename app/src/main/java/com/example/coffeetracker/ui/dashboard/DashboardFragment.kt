@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
@@ -52,6 +53,16 @@ class DashboardFragment : Fragment() {
             barChart.data = BarData(barDataSet);
             barChart.invalidate();
         })
+
+        val weekDisplayTextView: TextView = root.findViewById(R.id.weekDisplayTextView)
+        dashboardViewModel.startOfWeek.observe(viewLifecycleOwner, Observer {
+            weekDisplayTextView.text = "${it} to ${it.plusDays(6)}"
+        })
+
+        val weekLeftButton: ImageButton = root.findViewById(R.id.weekLeftButton)
+        val weekRightButton: ImageButton = root.findViewById(R.id.weekRightButton)
+        weekLeftButton.setOnClickListener { dashboardViewModel.weekLeft() }
+        weekRightButton.setOnClickListener { dashboardViewModel.weekRight() }
 
         return root
     }
